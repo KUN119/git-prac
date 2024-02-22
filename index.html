@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id='alert-box' class="alert-box">
+        <p id="pContents">  </p>
+        <button id="closeAlert">닫기</button>
+    </div>
+
+    <button onclick="alertControl('block', 'id 입력')">버튼1</button>
+    <button onclick="alertControl('block', 'pw 입력')">버튼2</button>
+    
+
+</body>
+<script>
+    function alertControl(e, a) {
+        document.getElementById('pContents').innerHTML = a;
+        document.getElementById('alert-box').style.display = e;
+    }
+
+    document.getElementById('closeAlert').addEventListener('click', () =>{
+        document.getElementById('alert-box').style.display = 'none';
+    })
+
+    document.getElementById('closeAlert').addEventListener('click', () =>{
+        document.getElementById('alert-box').style.display = 'none';
+    })
+</script>
+</html>
